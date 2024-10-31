@@ -9,20 +9,22 @@ import {
 
 export function Banners() {
     return (
-        <div className="bg-slate-600">
+        <div className="bg-slate-600 pt-[152px]">
 
         <Carousel>
         <CarouselContent>
             <CarouselItem>      
                 <img 
-                    src="/bannerLimpeza.jpg" 
+                    src="/bannerLimpeza.webp" 
                     alt="Banner de Limpeza" 
+                    loading="lazy"
                     className="h-[550px] w-full object-cover opacity-70" />
                 </CarouselItem>
             <CarouselItem>
                 <img 
                     src="/bannerLimpeza.jpg" 
                     alt="Banner de Limpeza" 
+                    loading="lazy"
                     className="h-[550px] w-full object-cover opacity-70" 
                 />
             </CarouselItem>

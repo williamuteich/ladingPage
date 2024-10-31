@@ -22,7 +22,7 @@ const socialLinks = [
 
 export function Header() {
     return (
-        <header className="flex flex-col gap-1">
+            <header className="flex flex-col gap-1 shadow-[1px_5px_7px_rgba(0,0,0,0.25)] bg-white fixed w-full z-10 ">
             <div className="bg-blue-900 w-full flex justify-center py-2 pr-6 pl-6">
                 <div className="max-w-screen-xl w-full flex justify-between py-1 pb-1">
                     <span className='w-full text-white hidden sm:flex sm:items-center gap-2 -tracking-tight text-lg'>
@@ -36,7 +36,7 @@ export function Header() {
                             <a key={name} href={href} className="mx-2" aria-label={name}>
                                 <span className="group">
                                     {icon}
-                                    <style jsx>{`
+                                    <style>{`
                                         .group:hover svg {
                                             transform: scale(1.1);
                                             transition: transform 0.2s;
