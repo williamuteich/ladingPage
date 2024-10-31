@@ -5,19 +5,19 @@ import { BiMenu } from 'react-icons/bi';
 import { CgMenuMotion } from "react-icons/cg";
 
 const menuItems = [
-    { name: 'Serviços', icon: <FaServicestack size={24} /> },
-    { name: 'Quem Somos', icon: <FaUsers size={24} /> },
-    { name: 'Limpeza Comercial', icon: <FaBuilding size={24} /> },
-    { name: 'Limpeza Residencial', icon: <FaHouseUser size={24} /> },
-    { name: 'Contato', icon: <FaEnvelope size={24} /> },
+    { name: 'Serviços', icon: <FaServicestack size={24} className='text-gray-600' /> },
+    { name: 'Quem Somos', icon: <FaUsers size={24} className='text-gray-600'/> },
+    { name: 'Limpeza Comercial', icon: <FaBuilding size={24} className='text-gray-600'/> },
+    { name: 'Limpeza Residencial', icon: <FaHouseUser size={24} className='text-gray-600'/> },
+    { name: 'Contato', icon: <FaEnvelope size={24} className='text-gray-600'/> },
 ];
 
 const socialLinks = [
-    { name: 'WhatsApp', icon: <FaWhatsapp size={24} color='white'/>, href: "https://wa.me/51998682733" },
-    { name: 'Instagram', icon: <FaInstagram size={24} color='white'/>, href: "https://www.instagram.com" },
-    { name: 'Facebook', icon: <FaFacebook size={24} color='white'/>, href: "https://www.facebook.com" },
-    { name: 'LinkedIn', icon: <FaLinkedin size={24} color='white'/>, href: "https://www.linkedin.com" },
-    { name: 'Twitter', icon: <FaTwitter size={24} color='white'/>, href: "https://twitter.com" },
+    { name: 'WhatsApp', icon: <FaWhatsapp size={24} color='white' />, href: "https://wa.me/51998682733" },
+    { name: 'Instagram', icon: <FaInstagram size={24} color='white' />, href: "https://www.instagram.com" },
+    { name: 'Facebook', icon: <FaFacebook size={24} color='white' />, href: "https://www.facebook.com" },
+    { name: 'LinkedIn', icon: <FaLinkedin size={24} color='white' />, href: "https://www.linkedin.com" },
+    { name: 'Twitter', icon: <FaTwitter size={24} color='white' />, href: "https://twitter.com" },
 ];
 
 export function Header() {
@@ -26,13 +26,23 @@ export function Header() {
             <div className="bg-blue-900 w-full flex justify-center py-2 pr-6 pl-6">
                 <div className="max-w-screen-xl w-full flex justify-between py-1 pb-1">
                     <span className='w-full text-white hidden sm:flex sm:items-center gap-2 -tracking-tight text-lg'>
-                        <FaPhone size={24} className='text-xl text-white' />
-                        (51) 99868-2733
+                        <a href="tel:+515998682733" className='flex items-center'>
+                            <FaPhone size={24} className='text-xl text-white' />
+                            (51) 99868-2733
+                        </a>
                     </span>
                     <div className='w-full flex justify-end'>
                         {socialLinks.map(({ name, icon, href }) => (
                             <a key={name} href={href} className="mx-2" aria-label={name}>
-                                {icon}
+                                <span className="group">
+                                    {icon}
+                                    <style jsx>{`
+                                        .group:hover svg {
+                                            transform: scale(1.1);
+                                            transition: transform 0.2s;
+                                        }
+                                    `}</style>
+                                </span>
                             </a>
                         ))}
                     </div>
@@ -46,13 +56,13 @@ export function Header() {
                     </div>
 
                     <nav className='hidden lg:flex gap-4'>
-                        {['Serviços', 'Quem Somos', 'Limpeza Comercial', 'Limpeza Residencial', 'Contato'].map((item) => (
+                        {menuItems.map(({ name }) => (
                             <a
-                                key={item}
+                                key={name}
                                 className='text-gray-600 font-normal border-b-2 border-transparent hover:border-b-2 hover:border-gray-600 transition-all'
                                 href="#"
                             >
-                                {item}
+                                {name}
                             </a>
                         ))}
                     </nav>
@@ -68,14 +78,17 @@ export function Header() {
 
                             <SheetContent>
                                 <nav>
-                                    <a href="#" className='flex h-10 w-10 mb-5 bg-primary rounded-full items-center justify-center'>
-                                        <CgMenuMotion  className='h-5 w-5 text-white transition-all' />
-                                        <span className='sr-only'>Menu</span>
-                                    </a>
+                                    <div className='flex items-stretch gap-2'>
+                                        <a href="#" className='flex h-10 w-10 mb-5 bg-primary rounded-full items-center justify-center'>
+                                            <CgMenuMotion className='h-5 w-5 text-white transition-all' />
+                                            <span className='sr-only'>Menu</span>
+                                        </a>
+                                        <p className='mt-2 font-semibold'>Menu Lateral</p>
+                                    </div>
                                     {menuItems.map(({ name, icon }) => (
                                         <a
                                             key={name}
-                                            className="flex items-center ml-5 gap-2 text-gray-600 hover:text-blue-600 transition-all py-2"
+                                            className="flex items-center pl-4 pr-4 gap-2 text-gray-600 hover:bg-gray-100 rounded-sm hover:text-blue-600 transition-all py-2"
                                             href="#"
                                         >
                                             {icon}
