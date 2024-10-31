@@ -2,6 +2,7 @@ import { FaWhatsapp, FaInstagram, FaFacebook, FaLinkedin, FaTwitter, FaPhone, Fa
 import { Sheet, SheetContent, SheetTrigger } from '../ui/sheet';
 import { Button } from '../ui/button';
 import { BiMenu } from 'react-icons/bi';
+import { CgMenuMotion } from "react-icons/cg";
 
 const menuItems = [
     { name: 'Serviços', icon: <FaServicestack size={24} /> },
@@ -59,7 +60,7 @@ export function Header() {
                     <div className='lg:hidden'>
                         <Sheet>
                             <SheetTrigger asChild>
-                                <Button>
+                                <Button className='p-3'>
                                     <BiMenu size={24} />
                                     <span className='sr-only'>abrir / fechar menu</span>
                                 </Button>
@@ -67,10 +68,14 @@ export function Header() {
 
                             <SheetContent>
                                 <nav>
+                                    <a href="#" className='flex h-10 w-10 mb-5 bg-primary rounded-full items-center justify-center'>
+                                        <CgMenuMotion  className='h-5 w-5 text-white transition-all' />
+                                        <span className='sr-only'>Menu</span>
+                                    </a>
                                     {menuItems.map(({ name, icon }) => (
                                         <a
                                             key={name}
-                                            className="flex items-center gap-2 text-gray-600 hover:text-blue-600 transition-all py-2"
+                                            className="flex items-center ml-5 gap-2 text-gray-600 hover:text-blue-600 transition-all py-2"
                                             href="#"
                                         >
                                             {icon}
