@@ -22,7 +22,7 @@ const socialLinks = [
 
 export function Header() {
     return (
-            <header className="flex flex-col gap-1 shadow-[1px_5px_7px_rgba(0,0,0,0.25)] bg-white fixed w-full z-10 ">
+        <header className="flex flex-col gap-1 shadow-[1px_5px_7px_rgba(0,0,0,0.25)] bg-white fixed w-full z-10 ">
             <div className="bg-blue-900 w-full flex justify-center py-2 pr-6 pl-6">
                 <div className="max-w-screen-xl w-full flex justify-between py-1 pb-1">
                     <span className='w-full text-white hidden sm:flex sm:items-center gap-2 -tracking-tight text-lg'>

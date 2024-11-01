@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
 import { Card, CardContent } from "@/components/ui/card";
-import Autoplay from "embla-carousel-autoplay";
 import {
   Carousel,
   CarouselContent,
@@ -9,7 +8,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Button } from "../ui/button";
+import { Button } from "@/components/ui/button";
 
 const servicos = [
   {
@@ -46,7 +45,7 @@ const servicos = [
 
 export function Servicos() {
   return (
-    <div>
+    <div className="border-b border-slate-200 border-b-1 pb-16">
       <h2 className="text-4xl font-medium text-[#97872c] text-center mt-6 mb-6">Nossos Serviços</h2>
       <Carousel
         opts={{
@@ -57,15 +56,15 @@ export function Servicos() {
       >
         <CarouselContent>
           {servicos.map((servico) => {
-            const { ref, inView } = useInView({ triggerOnce: true }); // Usando o hook
+            const { ref, inView } = useInView({ triggerOnce: true }); 
             return (
               <CarouselItem key={servico.id} className="md:basis-1/2 lg:basis-1/3 ">
                 <motion.div 
-                  ref={ref} // Referenciando o elemento
+                  ref={ref} 
                   className="p-1"
-                  initial={{ opacity: 0, y: 100 }} // Estado inicial
-                  animate={inView ? { opacity: 1, y: 0 } : {}} // Animação somente se estiver em vista
-                  transition={{ duration: 0.8 }} // Duração da animação
+                  initial={{ opacity: 0, y: 100 }} 
+                  animate={inView ? { opacity: 1, y: 0 } : {}} 
+                  transition={{ duration: 0.8 }} 
                 >
                   <Card>
                     <CardContent className="flex flex-col items-center p-6 shadow-lg rounded-lg">

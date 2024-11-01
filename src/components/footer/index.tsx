@@ -6,7 +6,6 @@ export function Footer() {
     const dataAtual = new Date();
     const anoAtual = dataAtual.getFullYear();
 
-    // Configuração do inView
     const { ref, inView } = useInView({ triggerOnce: true });
 
     return (

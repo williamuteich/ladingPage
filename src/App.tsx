@@ -1,6 +1,7 @@
 import './App.css'
 import { Container } from './components/container'
-import { Servicos } from './components/servicos'
+import { Etapas } from './components/home/etapas'
+import { Servicos } from './components/home/servicos'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <div>
       <Container >
         <Servicos />
+        <Etapas />
       </Container>
     </div>
   )
