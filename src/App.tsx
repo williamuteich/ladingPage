@@ -5,7 +5,7 @@ import { Servicos } from './components/servicos'
 function App() {
 
   return (
-    <div className='pr-6 pl-6'>
+    <div>
       <Container >
         <Servicos />
       </Container>

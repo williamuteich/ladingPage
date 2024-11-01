@@ -1,14 +1,25 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer"; 
 
 export function Footer() {
     const dataAtual = new Date();
     const anoAtual = dataAtual.getFullYear();
 
+    // Configuração do inView
+    const { ref, inView } = useInView({ triggerOnce: true });
+
     return (
         <footer className="bg-black text-white pr-6 pl-6 flex justify-center mt-16 pt-10 pb-10">
             <div className="max-w-screen-xl w-full">
                 <div className="flex flex-col md:flex-row justify-between text-center md:text-left gap-8 md:gap-24">
-                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
+                    <motion.div 
+                        ref={ref}
+                        initial={{ opacity: 0, x: -100 }} 
+                        animate={inView ? { opacity: 1, x: 0 } : {}} 
+                        transition={{ duration: 0.5 }}
+                        className="w-full md:max-w-[32%] mb-4 md:mb-0"
+                    >
                         <h2 className="text-2xl text-center mb-2 text-blue-900 font-bold flex flex-col justify-center items-center" style={{ lineHeight: '0.75' }}>
                             QuickShare 
                             <span className='text-base text-green-700'>clean</span>
@@ -18,44 +29,56 @@ export function Footer() {
                         </p>
                         <div className="flex justify-center mt-4">
                             <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
-                                <FaFacebook className="text-blue-600" />
+                                <FaFacebook size={18} className="text-blue-600" />
                             </a>
                             <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
-                                <FaInstagram className="text-pink-500" />
+                                <FaInstagram size={18} className="text-pink-500" />
                             </a>
                             <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
-                                <FaTwitter className="text-blue-400" />
+                                <FaTwitter size={18} className="text-blue-400" />
                             </a>
                             <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
-                                <FaLinkedin className="text-blue-700" />
+                                <FaLinkedin size={18} className="text-blue-700" />
                             </a>
                             <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
-                                <FaWhatsapp className="text-green-500" />
+                                <FaWhatsapp size={18} className="text-green-500" />
                             </a>
                         </div>
-                    </div>
-                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
+                    </motion.div>
+                    <motion.div 
+                        ref={ref}
+                        initial={{ opacity: 0, x: -50 }} 
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.5 }} 
+                        className="mb-4 md:mb-0"
+                    >
                         <h2 className="text-2xl mb-4 font-bold">Contatos</h2>
                         <div className="text-sm flex flex-col items-center md:items-start">
                             <div className="flex items-center mb-1">
-                                <FaPhone className="mr-2" /> (51) 99868-2733
+                                <FaPhone size={18} className="mr-2" /> (51) 99868-2733
                             </div>
                             <div className="flex items-center">
-                                <FaEnvelope className="mr-2" /> williamuteich14@gmail.com
+                                <FaEnvelope size={18} className="mr-2" /> williamuteich14@gmail.com
                             </div>
                         </div>
-                    </div>
-                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
+                    </motion.div>
+                    <motion.div 
+                        ref={ref}
+                        initial={{ opacity: 0, x: -50 }} 
+                        animate={inView ? { opacity: 1, x: 0 } : {}}
+                        transition={{ duration: 0.5 }} 
+                        className="mb-4 md:mb-0"
+                    >
                         <h2 className="text-2xl mb-4 font-bold">Endereços</h2>
                         <div className="flex flex-col items-center md:items-start">
                             <div className="flex items-center mb-1">
-                                <FaMapMarkerAlt className="mr-2" /> Ney da Gama 888
+                                <FaMapMarkerAlt size={18} className="mr-2" /> Ney da Gama 888
                             </div>
                             <span className="text-sm flex items-center">
-                                <FaClock className="mr-2" /> De segunda à sexta das 9h às 20h
+                                <FaClock size={18} className="mr-2" /> De segunda à sexta das 9h às 20h
                             </span>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
                 <div className="mt-10 mb-10">
                     <iframe

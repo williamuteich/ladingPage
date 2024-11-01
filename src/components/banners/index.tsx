@@ -5,13 +5,23 @@ import {
     CarouselNext,
     CarouselPrevious,
   } from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay";
   
 
 export function Banners() {
     return (
-        <div className="bg-slate-600 pt-[152px]">
+        <div className="bg-slate-600 pt-[148px] md:pt-[152px]">
 
-        <Carousel>
+        <Carousel
+            opts={{
+                loop: true,
+            }}
+            plugins={[
+                Autoplay({
+                    delay: 3000,
+                })
+            ]}
+        >
         <CarouselContent>
             <CarouselItem>      
                 <img 
