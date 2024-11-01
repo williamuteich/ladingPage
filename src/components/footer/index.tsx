@@ -1,4 +1,4 @@
-import { FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaInstagram, FaTwitter, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 
 export function Footer() {
     const dataAtual = new Date();
@@ -8,13 +8,33 @@ export function Footer() {
         <footer className="bg-black text-white pr-6 pl-6 flex justify-center mt-16 pt-10 pb-10">
             <div className="max-w-screen-xl w-full">
                 <div className="flex flex-col md:flex-row justify-between text-center md:text-left gap-8 md:gap-24">
-                    <div className="flex-1 mb-4 md:mb-0">
-                        <h2 className="text-2xl mb-4 text-blue-900 font-bold">QuickShare</h2>
-                        <p className="text-sm">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Illo, eius quam deserunt dolore velit sit fugit exercitationem rem culpa facilis tempora quae commodi hic, molestias, incidunt possimus voluptatum qui animi!
+                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
+                        <h2 className="text-2xl text-center mb-2 text-blue-900 font-bold flex flex-col justify-center items-center" style={{ lineHeight: '0.75' }}>
+                            QuickShare 
+                            <span className='text-base text-green-700'>clean</span>
+                        </h2>
+                        <p className="text-sm text-center">
+                            A QuickShare é uma empresa de limpeza que vai até a sua casa e oferece serviços de limpeza tanto para ambientes comerciais quanto residenciais. Nossa equipe é treinada para garantir a máxima qualidade e satisfação, proporcionando um ambiente limpo e agradável para você.
                         </p>
+                        <div className="flex justify-center mt-4">
+                            <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
+                                <FaFacebook className="text-blue-600" />
+                            </a>
+                            <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
+                                <FaInstagram className="text-pink-500" />
+                            </a>
+                            <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
+                                <FaTwitter className="text-blue-400" />
+                            </a>
+                            <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
+                                <FaLinkedin className="text-blue-700" />
+                            </a>
+                            <a href="#" className="mx-2 transform transition-transform duration-200 hover:scale-110">
+                                <FaWhatsapp className="text-green-500" />
+                            </a>
+                        </div>
                     </div>
-                    <div className="flex-1 mb-4 md:mb-0">
+                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
                         <h2 className="text-2xl mb-4 font-bold">Contatos</h2>
                         <div className="text-sm flex flex-col items-center md:items-start">
                             <div className="flex items-center mb-1">
@@ -25,13 +45,15 @@ export function Footer() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex-1 mb-4 md:mb-0">
+                    <div className="w-full md:w-[32%] mb-4 md:mb-0">
                         <h2 className="text-2xl mb-4 font-bold">Endereços</h2>
                         <div className="flex flex-col items-center md:items-start">
                             <div className="flex items-center mb-1">
                                 <FaMapMarkerAlt className="mr-2" /> Ney da Gama 888
                             </div>
-                            <span className="text-sm">De segunda à sexta das 9h às 20h</span>
+                            <span className="text-sm flex items-center">
+                                <FaClock className="mr-2" /> De segunda à sexta das 9h às 20h
+                            </span>
                         </div>
                     </div>
                 </div>
