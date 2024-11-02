@@ -27,7 +27,7 @@ const servicos = [
   {
     id: 3,
     title: "Limpeza de Estofados",
-    description: "Limpeza profunda de sofás, cadeiras e outros estofados.",
+    description: "Limpeza profunda de sofás, cadeiras, poltronas, tapetes e outros estofados.",
     image: "https://imgs.search.brave.com/SkmVhlp-2BwfAOMLaFR78OG3vvOWS5fhGu6xWb8xdho/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMudmVjdGVlenku/Y29tL3RpL2ZvdG9z/LWdyYXRpcy90Mi85/ODg0MDgzLWVtcHJl/Z2FkYS1saW1wZXph/LWxhdmFyLWUtZXNm/cmVnYXItYmFjaWEt/bm8tYmFuaGVpcm8t/ZW0tY2FzYS1mb3Rv/LmpwZw",
   },
   {
@@ -60,7 +60,7 @@ export function Servicos() {
             {servicos.map((servico) => {
               const { ref, inView } = useInView({ triggerOnce: true }); 
               return (
-                <CarouselItem key={servico.id} className="md:basis-1/2 lg:basis-1/3 ">
+                <CarouselItem key={servico.id} className=" md:basis-1/2 lg:basis-1/3 h-full">
                   <motion.div 
                     ref={ref} 
                     className="p-1"
@@ -87,8 +87,8 @@ export function Servicos() {
               );
             })}
           </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
+          <CarouselPrevious className="left-6 top-32 2xl:-left-14 2xl:top-1/2"/>
+          <CarouselNext className="right-6 top-32 2xl:-right-14 2xl:top-1/2"/>
         </Carousel>
       </div>
     </Container>

@@ -18,7 +18,7 @@ export function Etapas() {
                         transition={{ duration: 0.8 }}
                         className="flex flex-col mt-32 xl:flex-row gap-8 justify-center  xl:mt-36"
                     >
-                        <article className="flex flex-col items-center mb-36 xl:mb-8 border p-4 relative shadow-xl rounded-sm">
+                        <article className="flex flex-col items-center mb-36 xl:mb-8 border p-4 relative shadow-blue-200 shadow-md rounded-sm">
                             <div className="mb-4 text-blue-900 absolute -top-32 border-4 border-blue-900 p-6 rounded-full">
                                 <div className='relative'>
                                     <p className='absolute -top-10 right-8 text-base bg-blue-900 text-white pt-2 pb-2 pl-4 pr-4 rounded-full'>1</p>
@@ -33,7 +33,7 @@ export function Etapas() {
                             </div>
                         </article>
 
-                        <article className="flex flex-col items-center mb-36 xl:mb-8 border p-4 relative shadow-xl rounded-sm">
+                        <article className="flex flex-col items-center mb-36 xl:mb-8 border p-4 relative shadow-blue-200 shadow-md rounded-sm">
                             <div className="mb-4 text-blue-900 absolute -top-32 border-4 border-blue-900 p-6 rounded-full">
                                 <div className='relative'>
                                     <p className='absolute -top-10 right-8 text-base bg-blue-900 text-white pt-2 pb-2 pl-4 pr-4 rounded-full'>2</p>
@@ -48,7 +48,7 @@ export function Etapas() {
                             </div>
                         </article>
 
-                        <article className="flex flex-col items-center mb-36 xl:mb-8 border p-4 relative shadow-xl rounded-sm">
+                        <article className="flex flex-col items-center xl:mb-8 border p-4 relative shadow-blue-200 shadow-md rounded-sm">
                             <div className="mb-4 text-blue-900 absolute -top-32 border-4 border-blue-900 p-6 rounded-full">
                                 <div className='relative'>
                                     <p className='absolute -top-10 right-8 text-base bg-blue-900 text-white pt-2 pb-2 pl-4 pr-4 rounded-full'>3</p>
