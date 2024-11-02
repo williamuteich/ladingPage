@@ -52,7 +52,7 @@ export function Header() {
             <div className="w-full flex items-center justify-center py-2 pb-2 pr-6 pl-6">
                 <div className="max-w-screen-xl w-full flex justify-between lg:justify-start gap-24 items-center">
                     <div>
-                        <img src="./logo.png" alt="quickshare" className="w-auto h-20 object rounded-md hover:cursor-pointer hover:scale-105 hover:transition-all" />
+                        <img src="./logo.jpeg" alt="quickshare" className="w-auto h-20 object rounded-md hover:cursor-pointer hover:scale-105 hover:transition-all" />
                     </div>
 
                     <nav className='hidden lg:flex gap-4'>

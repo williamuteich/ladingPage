@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
+import { Container } from "@/components/container";
 
 const servicos = [
   {
@@ -45,49 +46,51 @@ const servicos = [
 
 export function Servicos() {
   return (
-    <div className="border-b border-slate-200 border-b-1 pb-16">
-      <h2 className="text-4xl font-medium text-[#97872c] text-center mt-6 mb-6">Nossos Serviços</h2>
-      <Carousel
-        opts={{
-         align: "start",
-        }}
-       
-        className="w-full"
-      >
-        <CarouselContent>
-          {servicos.map((servico) => {
-            const { ref, inView } = useInView({ triggerOnce: true }); 
-            return (
-              <CarouselItem key={servico.id} className="md:basis-1/2 lg:basis-1/3 ">
-                <motion.div 
-                  ref={ref} 
-                  className="p-1"
-                  initial={{ opacity: 0, y: 100 }} 
-                  animate={inView ? { opacity: 1, y: 0 } : {}} 
-                  transition={{ duration: 0.8 }} 
-                >
-                  <Card>
-                    <CardContent className="flex flex-col items-center pr-2 pl-2 pt-4 pb-4 shadow-lg rounded-lg">
-                      <img
-                        src={servico.image}
-                        alt={servico.title}
-                        className="mb-4 h-56 w-full object-cover rounded"
-                      />
-                      <h3 className="text-xl font-semibold mb-2 text-blue-900">{servico.title}</h3>
-                      <p className="text-center mb-4 text-sm leading-4">{servico.description}</p>
-                      <Button className="w-full bg-blue-900">
-                        Solicitar
-                      </Button>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
-      </Carousel>
-    </div>
+    <Container>
+      <div className="border-b border-slate-200 border-b-1 pb-16">
+        <h2 className="text-4xl font-medium text-[#97872c] text-center mt-6 mb-6">Nossos Serviços</h2>
+        <Carousel
+          opts={{
+          align: "start",
+          }}
+        
+          className="w-full"
+        >
+          <CarouselContent>
+            {servicos.map((servico) => {
+              const { ref, inView } = useInView({ triggerOnce: true }); 
+              return (
+                <CarouselItem key={servico.id} className="md:basis-1/2 lg:basis-1/3 ">
+                  <motion.div 
+                    ref={ref} 
+                    className="p-1"
+                    initial={{ opacity: 0, y: 100 }} 
+                    animate={inView ? { opacity: 1, y: 0 } : {}} 
+                    transition={{ duration: 0.8 }} 
+                  >
+                    <Card>
+                      <CardContent className="flex flex-col items-center pr-2 pl-2 pt-4 pb-4 shadow-lg rounded-lg">
+                        <img
+                          src={servico.image}
+                          alt={servico.title}
+                          className="mb-4 h-56 w-full object-cover rounded"
+                        />
+                        <h3 className="text-xl font-semibold mb-2 text-blue-900">{servico.title}</h3>
+                        <p className="text-center mb-4 text-sm leading-4">{servico.description}</p>
+                        <Button className="w-full bg-blue-900">
+                          Solicitar
+                        </Button>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
+      </div>
+    </Container>
   );
 }
