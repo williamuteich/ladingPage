@@ -8,7 +8,7 @@ export function Etapas() {
     const { ref, inView } = useInView({ triggerOnce: true });
     return (
         <Container>
-            <div className="max-w-screen-xl py-8 m-auto xl:pr-2 xl:pl-2">
+            <div id="etapas" title="etapas" className="max-w-screen-xl py-8 m-auto xl:pr-2 xl:pl-2">
                 <section className="flex flex-col gap-4">
                     <h2 className="text-4xl font-medium text-[#97872c] text-center mt-6 mb-6">Nossas Etapas de Limpeza</h2>
                     <motion.div 

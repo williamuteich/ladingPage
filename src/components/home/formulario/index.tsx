@@ -10,7 +10,7 @@ export function Formulario() {
 
     return (
         <Container>
-            <div className="bg-white space-y-6 flex justify-between flex-col md:flex-row">
+            <div  id="formulario" title="formulario" className="bg-white space-y-6 flex justify-between flex-col md:flex-row">
                 <motion.div
                     className="md:w-1/2 flex items-center justify-center"
                     ref={ref}

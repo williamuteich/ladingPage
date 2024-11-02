@@ -9,7 +9,7 @@ export function Footer() {
     const { ref, inView } = useInView({ triggerOnce: true });
 
     return (
-        <footer className="bg-black text-white pr-6 pl-6 flex justify-center mt-16 pt-10 pb-10">
+        <footer id="contato" title="contato" className="bg-black text-white pr-6 pl-6 flex justify-center mt-16 pt-10 pb-10">
             <div className="max-w-screen-xl w-full">
                 <div className="flex flex-col md:flex-row justify-between text-center md:text-left gap-8 md:gap-24">
                     <motion.div 

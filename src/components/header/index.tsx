@@ -5,11 +5,11 @@ import { BiMenu } from 'react-icons/bi';
 import { CgMenuMotion } from "react-icons/cg";
 
 const menuItems = [
-    { name: 'Serviços', icon: <FaServicestack size={24} className='text-gray-600' /> },
-    { name: 'Quem Somos', icon: <FaUsers size={24} className='text-gray-600'/> },
-    { name: 'Limpeza Comercial', icon: <FaBuilding size={24} className='text-gray-600'/> },
-    { name: 'Limpeza Residencial', icon: <FaHouseUser size={24} className='text-gray-600'/> },
-    { name: 'Contato', icon: <FaEnvelope size={24} className='text-gray-600'/> },
+    { name: 'Nossos Serviços', icon: <FaServicestack size={24} className='text-gray-600' />, href: "servicos" },
+    { name: 'Quem Somos', icon: <FaUsers size={24} className='text-gray-600'/>, href: "sobre" },
+    { name: 'Formulário', icon: <FaBuilding size={24} className='text-gray-600'/>, href: "formulario" },
+    { name: 'Etapas', icon: <FaHouseUser size={24} className='text-gray-600'/>, href: "etapas" },
+    { name: 'Contato', icon: <FaEnvelope size={24} className='text-gray-600'/>, href: "contato" },
 ];
 
 const socialLinks = [
@@ -22,7 +22,7 @@ const socialLinks = [
 
 export function Header() {
     return (
-        <header className="flex flex-col gap-1 shadow-[1px_5px_7px_rgba(0,0,0,0.25)] bg-white fixed w-full z-10 ">
+        <header className="flex flex-col gap-1 shadow-[1px_5px_7px_rgba(0,0,0,0.25)] bg-white fixed w-full z-10">
             <div className="bg-blue-900 w-full flex justify-center py-2 pr-6 pl-6">
                 <div className="max-w-screen-xl w-full flex justify-between py-1 pb-1">
                     <span className='w-full text-white hidden sm:flex sm:items-center gap-2 -tracking-tight text-lg'>
@@ -33,7 +33,7 @@ export function Header() {
                     </span>
                     <div className='w-full flex justify-end'>
                         {socialLinks.map(({ name, icon, href }) => (
-                            <a key={name} href={href} className="mx-2" aria-label={name}>
+                            <a key={name} href={href} className="mx-2" aria-label={name} target="_blank" rel="noopener noreferrer">
                                 <span className="group">
                                     {icon}
                                     <style>{`
@@ -56,11 +56,11 @@ export function Header() {
                     </div>
 
                     <nav className='hidden lg:flex gap-4'>
-                        {menuItems.map(({ name }) => (
+                        {menuItems.map(({ name, href }) => (
                             <a
                                 key={name}
                                 className='text-gray-600 font-normal border-b-2 border-transparent hover:border-b-2 hover:border-gray-600 transition-all'
-                                href="#"
+                                href={`#${href}`}
                             >
                                 {name}
                             </a>
@@ -85,11 +85,11 @@ export function Header() {
                                         </a>
                                         <p className='mt-2 font-semibold'>Menu Lateral</p>
                                     </div>
-                                    {menuItems.map(({ name, icon }) => (
+                                    {menuItems.map(({ name, icon, href }) => (
                                         <a
                                             key={name}
                                             className="flex items-center pl-4 pr-4 gap-2 text-gray-600 hover:bg-gray-100 rounded-sm hover:text-blue-600 transition-all py-2"
-                                            href="#"
+                                            href={`#${href}`}
                                         >
                                             {icon}
                                             {name}

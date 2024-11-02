@@ -47,7 +47,7 @@ const servicos = [
 export function Servicos() {
   return (
     <Container>
-      <div className="border-b border-slate-200 border-b-1 pb-16">
+      <div id="servicos" title="servicos" className="border-b border-slate-200 border-b-1 pb-16">
         <h2 className="text-4xl font-medium text-[#97872c] text-center mt-6 mb-6">Nossos Serviços</h2>
         <Carousel
           opts={{
