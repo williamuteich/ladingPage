@@ -67,7 +67,7 @@ export function Servicos() {
                   transition={{ duration: 0.8 }} 
                 >
                   <Card>
-                    <CardContent className="flex flex-col items-center p-6 shadow-lg rounded-lg">
+                    <CardContent className="flex flex-col items-center pr-2 pl-2 pt-4 pb-4 shadow-lg rounded-lg">
                       <img
                         src={servico.image}
                         alt={servico.title}

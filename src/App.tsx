@@ -8,8 +8,8 @@ function App() {
   return (
     <div>
       <Container >
-        <Servicos />
         <Etapas />
+        <Servicos />
       </Container>
     </div>
   )

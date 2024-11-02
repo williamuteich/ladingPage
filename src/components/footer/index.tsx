@@ -16,7 +16,7 @@ export function Footer() {
                         ref={ref}
                         initial={{ opacity: 0, x: -100 }} 
                         animate={inView ? { opacity: 1, x: 0 } : {}} 
-                        transition={{ duration: 0.5 }}
+                        transition={{ duration: 0.8 }}
                         className="w-full md:max-w-[32%] mb-4 md:mb-0"
                     >
                         <h2 className="text-2xl text-center mb-2 text-blue-900 font-bold flex flex-col justify-center items-center" style={{ lineHeight: '0.75' }}>
