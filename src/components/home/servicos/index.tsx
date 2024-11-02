@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
-import { Container } from "@/components/container";
+import { Container } from "@/components/home/container";
 
 const servicos = [
   {

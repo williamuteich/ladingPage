@@ -1,7 +1,7 @@
 import { FaClipboardCheck, FaBroom, FaComments } from 'react-icons/fa'; 
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer"; 
-import { Container } from '@/components/container';
+import { Container } from '@/components/home/container';
 
 export function Etapas() {
 
