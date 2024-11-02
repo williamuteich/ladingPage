@@ -31,7 +31,7 @@ export function Formulario() {
                     animate={inView ? { x: 0 } : {}} 
                     transition={{ duration: 0.8 }} 
                 >
-                    <h2 className="text-4xl text-center font-semibold text-[#97872c]">Contato</h2>
+                    <h2 className="text-4xl font-bold text-center text-[#97872c]">Contato</h2>
                     <p className="text-gray-600 mt-2 text-center">
                         Entre em contato conosco para esclarecer dúvidas ou obter mais informações sobre nossos serviços. Estamos aqui para ajudar e garantir que você tenha a melhor experiência possível. Não hesite em nos enviar suas perguntas ou comentários!
                     </p>
