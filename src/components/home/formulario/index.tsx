@@ -31,8 +31,8 @@ export function Formulario() {
                     animate={inView ? { x: 0 } : {}} 
                     transition={{ duration: 0.8 }} 
                 >
-                    <h2 className="text-4xl font-semibold text-[#97872c]">Contato</h2>
-                    <p className="text-gray-600 mt-2">
+                    <h2 className="text-4xl text-center font-semibold text-[#97872c]">Contato</h2>
+                    <p className="text-gray-600 mt-2 text-center">
                         Entre em contato conosco para esclarecer dúvidas ou obter mais informações sobre nossos serviços. Estamos aqui para ajudar e garantir que você tenha a melhor experiência possível. Não hesite em nos enviar suas perguntas ou comentários!
                     </p>
 
@@ -82,7 +82,7 @@ export function Formulario() {
                         <label htmlFor="textarea" className="block text-sm font-medium text-gray-700">Observações</label>
                         <Textarea 
                             placeholder="Escreva suas observações aqui." 
-                            className="mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-[#97872c] transition duration-150 h-44" 
+                            className="mt-1 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring focus:ring-[#97872c] transition duration-150 h-32" 
                         />
                     </div>
 
